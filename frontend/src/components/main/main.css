@@ -1,0 +1,45 @@
+/* main.css */
+
+/* 1) wrap your layout in a flex container */
+.layout {
+  display: flex;
+  height: 100vh;              /* fill viewport height */
+  background-color: #f2f4f7;   /* light grey bg */
+}
+
+/* 2) ensure your sidebar stays a fixed width */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+}
+
+/* 3) the main area grows to fill the rest */
+.main-container {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* 4) give MaterialTable’s Paper a card look */
+.main-container .MuiPaper-root {
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 5) responsive: stack on small screens */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .main-container {
+    padding: 1rem;
+  }
+}
