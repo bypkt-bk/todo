@@ -23,7 +23,7 @@ const SignIn = () => {
           color: '#fff',
         },
       });
-      setCookie('token', data.token, { path: '/', maxAge: 5 });
+      setCookie('token', data.token, { path: '/', maxAge: 60 });
       navigator('/main');
     } catch (err) {
       const errorMessage = err.response?.data?.message || 'Login failed';
