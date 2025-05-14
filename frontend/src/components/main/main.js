@@ -8,7 +8,8 @@ import "./main.css";
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import th from "date-fns/locale/th";
-import ThaiBuddhistDatePicker from "./ThaiBuddhistDatePicker";  // อย่าลืมสร้างไฟล์นี้ตามที่ให้ไว้ก่อนหน้า
+import ThaiBuddhistDatePicker from "./ThaiBuddhistDatePicker";
+
 
 const Main = () => {
   const [activities, setActivities] = useState([]);
